@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
+
+#start-header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px lightblue;
+}
+
+#start-screen {
+    background-color: rgb(215, 116, 116);
+}
+
+#start-button {
+    box-shadow: 2px 2px;
+}
+
+#high-scores {
+    text-align: center;
+    border: 2px black;
+}
