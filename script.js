@@ -207,8 +207,12 @@ window.onload = function () {
     function drawMenu() {
         //draw the rectangle menu backdrop
 
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.save();
+        context.beginPath();
         //draw the menu header
 
+        context.scale
         //start game button area
 
         //event listener for clicking start
@@ -243,13 +247,22 @@ window.onload = function () {
     //function to handle game speed adjustments when we move our slider
     function adjustGameSpeed() {
         //update the slider display                
-        //update the game speed multiplier                
+        //update the game speed multiplier   
+
+        let speed = document.getElementById("speed-slider");
+        let speedScale = document.getElementById("speed-scale");
+        speed.addEventListener("input", function () {
+            speedScale.innerHTML = speed.value;
+        })
     };
 
     //function to toggle the play/paused game state
     function togglePauseGame() {
         //toggle state                
         //if we are not paused, we want to continue animating (hint: zyBook 8.9)
+        let canvas = document.getElementById("myCanvas");
+        let context = canvas.getContext("2d");
+
     };
 
     //function to check win state
@@ -261,20 +274,23 @@ window.onload = function () {
 
     //function to clear the board state and start a new game (no high score accumulation)
     function startNewGame(resetScore) {
-
+        score = 0;
     };
 
     //function to reset the board and continue playing (accumulate high score)
     //should make sure we didn't lose before accumulating high score
     function continuePlaying() {
-
+        draw();
     };
 
     //function to reset starting game info
     function resetBoard(resetLives) {
         //reset paddle position
         //reset bricks               
-        //reset score and lives               
+        //reset score and lives   
+        paddleX = (canvas.width - paddleWidth) / 2;
+        lives = 0;
+        brickOffsetLeft = 30;
     };
 
     //draw the menu.
